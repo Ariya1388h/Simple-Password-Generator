@@ -2,10 +2,10 @@ let passtxt = document.getElementById("passtxt");
 
 function rpg() {
     let pass = "";
-    const alphabet = 'abcdefghijklmnopqrstuvwxyz!@#$%&ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+    const alphabet = '!@#$%&abcdefghijklmnopqrstuvwxyz!@#$%&ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
 
     while (pass.length < 10) {
-        pass += alphabet[Math.floor(Math.random() * 68)];
+        pass += alphabet[Math.floor(Math.random() * 74)];
     }
 
     return pass;
