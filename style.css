@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Designer.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    color: #e0e0e0;
+    overflow: hidden;
+}
+
+.function {
+    text-align: center;
+    background-color: #133038a9;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px #498699;
+    max-width: 400px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+}
+
+button {
+    background-color: #122d35;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #204550;
+    transform: scale(1.2);
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+#passtxt {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #b0b0b0;
+    letter-spacing: 1px;
+}
