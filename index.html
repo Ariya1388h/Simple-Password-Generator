@@ -5,16 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-    <title>Password Generatorr</title>
+    <title>Password Generator</title>
 </head>
 <body>
     <link rel="icon" href="favicon.png" type="image/png">
 
-    <div class="function">
-        <button onclick="gp()">GENERATE PASSWORD</button>
-        <p id="passtxt">Click The Button</p>
-        <button onclick="copyPassword()">COPY</button>
-    </div>
+    <section class="section" id="generate-section">
+        <div class="function">
+            <button id="generatebtn" onclick="generatePassword()">GENERATE PASSWORD</button>
+            <p id="passtxt">Click The Button</p>
+            <button id="copybtn" onclick="copyPassword()">COPY</button>
+            <button id="savebtn" onclick="savePassword()">SAVE</button>
+        </div>
+    </section>
+    
+    <section class="section" id="filters-section">
+        <div class="filter">
+            <form id="myForm">
+                <div class="num-input">
+                    <label for="numberInput">Password Length:</label>
+                    <input type="number" id="numberInput" name="numberInput" value="10" min="1" max="20" step="1">
+                </div>
+                    
+                <div class="filter-input">
+                    <label>
+                        <input type="checkbox" id="uppercase" checked> UPPERCASE LETTERS
+                    </label><br>
+                    <label>
+                        <input type="checkbox" id="lowercase" checked> LOWERCASE LETTERS
+                    </label><br>
+                    <label>
+                        <input type="checkbox" id="numbers" checked> NUMBERS
+                    </label><br>
+                    <label>
+                        <input type="checkbox" id="symbols" checked> SYMBOLS
+                    </label>
+                </div>
+            </form>
+        </div>
+    </section>
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
