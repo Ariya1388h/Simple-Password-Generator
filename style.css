@@ -23,7 +23,8 @@ section {
 }
 
 .section {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     background-color: #133038a9;
