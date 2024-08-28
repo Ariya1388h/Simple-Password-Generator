@@ -70,6 +70,67 @@ function savePassword() {
     // Implement actual save logic if needed
 }
 
+// Ensure DOM content is loaded before running GSAP animations
+document.addEventListener("DOMContentLoaded", function() {
+  // Create a new GSAP timeline
+  let tl = gsap.timeline();
+
+  // Animate the "GENERATE PASSWORD" button
+  tl.from("#generatebtn", {
+    duration: 1, 
+    y: 50, 
+    opacity: 0, 
+    ease: "power3.out"
+  })
+
+  // Animate the "Click The Button" text
+  .from("#passtxt", {
+    duration: 1, 
+    y: 20, 
+    opacity: 0, 
+    ease: "power3.out"
+  }, "-=0.5")  // Overlap this animation with the previous one by 0.5 seconds
+
+  // Animate the "COPY" button
+  .from("#copybtn", {
+    duration: 1, 
+    y: 20, 
+    opacity: 0, 
+    ease: "power3.out"
+  }, "-=0.5")  // Overlap this animation with the previous one by 0.5 seconds
+
+  // Animate the "SAVE" button
+  .from("#savebtn", {
+    duration: 1, 
+    y: 20, 
+    opacity: 0, 
+    ease: "power3.out"
+  }, "-=0.5")  // Overlap this animation with the previous one by 0.5 seconds
+
+  // Animate the filters form
+  .from("#myForm", {
+    duration: 1, 
+    opacity: 0, 
+    y: 20, 
+    ease: "power3.out"
+  }, "+=0.5")  // Start this animation 0.5 seconds after the previous one ends
+
+  // Animate individual form elements
+  .from(".num-input", {
+    duration: 1, 
+    opacity: 0, 
+    x: -20, 
+    ease: "power3.out"
+  }, "-=0.5")  // Overlap this animation with the previous one by 0.5 seconds
+
+  .from(".filter-input label", {
+    duration: 1, 
+    opacity: 0, 
+    stagger: 0.2,  // Animate each label with a stagger effect
+    x: -20, 
+    ease: "power3.out"
+  }, "-=0.5");  // Overlap this animation with the previous one by 0.5 seconds
+});
 
 
 
