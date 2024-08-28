@@ -72,37 +72,37 @@ function savePassword() {
 
 document.addEventListener("DOMContentLoaded", function() {
   // Create a new GSAP timeline with default settings
-  let tl = gsap.timeline({defaults: {duration: 1, ease: "power3.out"}});
+  let tl = gsap.timeline({defaults: {duration: 1, ease: "power3.out", autoAlpha: 0}});
 
   // Animate the "GENERATE PASSWORD" button
-  tl.from("#generatebtn", { y: 50, opacity: 0 })
+  tl.from("#generatebtn", { y: 50 })
 
     // Animate the "Click The Button" text
-    .from("#passtxt", { y: 20, opacity: 0 }, "-=0.5")  // Overlap this animation by 0.5 seconds
+    .from("#passtxt", { y: 20 }, "-=0.5")  // Overlap this animation by 0.5 seconds
 
     // Animate the "COPY" button
-    .from("#copybtn", { y: 20, opacity: 0 }, "-=0.4")  // Slight overlap with previous animation
+    .from("#copybtn", { y: 20 }, "-=0.4")  // Slight overlap with previous animation
 
     // Animate the "SAVE" button
-    .from("#savebtn", { y: 20, opacity: 0 }, "-=0.4")  // Slight overlap with previous animation
+    .from("#savebtn", { y: 20 }, "-=0.4")  // Slight overlap with previous animation
 
     // Animate the filters form
-    .from("#myForm", { opacity: 0, y: 20 }, "+=0.2")  // Slight delay after previous animation
+    .from("#myForm", { y: 20 }, "+=0.2")  // Slight delay after previous animation
 
     // Animate the password length input
-    .from(".num-input", { opacity: 0, x: -20 }, "-=0.8")  // Overlap more to make the animations faster
+    .from(".num-input", { x: -20 }, "-=0.8")  // Overlap more to make the animations faster
 
     // Animate each filter checkbox label
-    .from(".filter-input label", { opacity: 0, x: -20, stagger: 0.2 }, "-=0.6");  // Slight overlap for staggered effect
+    .from(".filter-input label", { x: -20, stagger: 0.2 }, "-=0.6");  // Slight overlap for staggered effect
 
   // Function to animate text change
   function animatePasswordText(newText) {
     gsap.to("#passtxt", {
       duration: 0.5,
-      opacity: 0,
+      autoAlpha: 0,
       onComplete: function() {
         document.getElementById("passtxt").textContent = newText;
-        gsap.to("#passtxt", { duration: 0.5, opacity: 1 });
+        gsap.to("#passtxt", { duration: 0.5, autoAlpha: 1 });
       }
     });
   }
@@ -116,7 +116,6 @@ document.addEventListener("DOMContentLoaded", function() {
   // Attach generatePassword to button for demo (you can replace this with your existing function)
   document.getElementById("generatebtn").onclick = generatePassword;
 });
-
 
 
 
