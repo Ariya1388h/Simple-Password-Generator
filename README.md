@@ -1,2 +1,2 @@
 # Password Generator
-Simple Password Generator made with Html, CSS, Javascript
+Simple Password Generator made with Html, CSS, JavaScript
