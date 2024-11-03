@@ -1,1 +1,2 @@
-this is an open source password generator still in-dev
+# Password Generator
+Simple Password Generator made with Html, CSS, JavaScript

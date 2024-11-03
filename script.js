@@ -75,14 +75,6 @@ function savePassword() {
 
 
 
-
-
-
-
-
-
-
-
 // let passtxt = document.getElementById("passtxt");
 
 // function rpg() {
